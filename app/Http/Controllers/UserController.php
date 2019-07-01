@@ -26,23 +26,23 @@ class UserController extends Controller
             $now = Carbon::now();
             $dt = Carbon::create($begin);
             // $month_now = $now->month;
-            // $month_dt = $dt->month;
-            $month = $now->diffInMonths($dt);
+            $month_dt = $dt->month;
+            $month = ($now->diffInMonths($dt))+1;
             // dd($month);
 // echo (($diff->format('%y') * 12) + $diff->format('%m')) . " full months difference";
             // $month = $month_now - $month_dt + 1;
             // $data['month'] = $month;
-            // $data['start'] = $month_dt;
+            $data['start'] = $month_dt;
             // // $month = $month > 1 ? $month : 2;
-            $date1 = Carbon::createMidnightDate(2019, 1, 1);
-$date2 = Carbon::createMidnightDate(2019, 7, 9);
-dd($date1->diffInMonths($date2));
+//             $date1 = Carbon::createMidnightDate(2019, 1, 1);
+// $date2 = Carbon::createMidnightDate(2019, 7, 9);
+// dd($date1->diffInMonths($date2));
 
-            $firstDate = new \DateTime($now);
-$secondDate  = new \DateTime($dt);
-$interval = date_diff($firstDate, $secondDate);
+//             $firstDate = new \DateTime($now);
+// $secondDate  = new \DateTime($dt);
+// $interval = date_diff($firstDate, $secondDate);
 
-$month = $interval->format('%y')*12+$interval->format('%m') . " months";
+// $month = $interval->format('%y')*12+$interval->format('%m') . " months";
 $data['month'] = $month;
 $data['start'] = $month_dt;
         }

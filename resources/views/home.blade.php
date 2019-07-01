@@ -14,8 +14,9 @@
                         </div>
                     @endif
                     Thành công !!!!
+                    <ul>
                     &nbsp;<li><a class="btn btn-link" href="{{ route('admin.user.index') }}">Thông tin tài khoản</a></li>
-
+                    </ul>
                 </div>
             </div>
         </div>

@@ -13,13 +13,10 @@
                             <div class="form-group">
                                 <label for="name">Tên Ví</label>
                             <input disabled type="text" class="form-control" id="name" name="name" value="{{ $user->wallet->name }}">
-
                             </div>
-
                             <div class="form-group">
                                 <label for="order">Tên tài khoản</label>
                             <input disabled type="text" class="form-control" value="{{ $user->name }}" >
-
                             </div>
                             <div class="form-group">
                                     <label for="order">Số tài khoản</label>
